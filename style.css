@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px; /* Space between cells */
+}
+/* Grid Cell Styling */
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #cccccc;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+/* Add active state when clicked */
+.cell.active {
+  pointer-events: none; /* Disable further clicks */
+}
+
+/* Winning combination highlight (optional) */
+.cell.win {
+  background-color: #a3d9a5;
+  color: #ffffff;
+}
+.result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: Arial, sans-serif;
+}
+
+.result.winner {
+  color: #28a745; /* Green for a winner */
+  font-weight: bold;
+}
+
+.result.draw {
+  color: #dc3545; /* Red for a draw */
+  font-weight: bold;
+}
+
+.result span {
+  color: #007bff; /* Blue for the player */
+}
